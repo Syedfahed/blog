@@ -34,7 +34,7 @@ export default function MyBlog() {
     <>
       <NavBar />
 
-      <div className="px-20 py-10 bg-slate-200">
+      <div className="xl:px-20 md:px-20 lg:px-20 px-5 py-10 bg-slate-200">
         <h1 className="text-3xl my-4 text-center">My blogs</h1>
         {isLoading ? (
           <Skeleton active />

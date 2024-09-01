@@ -73,7 +73,7 @@ export default function Blog() {
   return (
     <>
       <NavBar />
-      <div className="p-20 bg-slate-200">
+      <div className="xl:p-20 lg:p-20 md:p-10 p-5 bg-slate-200">
         {isLoading ? (
           <Skeleton active />
         ) : (

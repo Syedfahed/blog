@@ -54,7 +54,7 @@ export default function CreateBlog() {
     <>
       {contextHolder}
       <NavBar />
-      <div className="w-[50%] m-auto mt-10">
+      <div className="xl:w-[50%] lg:w-[50%] md:w-[50%] w-[90%] m-auto mt-10">
         <h1 className="text-4xl text-center my-5 ">Post a blog</h1>
         <form className="flex flex-col gap-3" onSubmit={handleSubmit(onSubmit)}>
           <section>
