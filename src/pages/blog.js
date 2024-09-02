@@ -75,7 +75,10 @@ export default function Blog() {
       <NavBar />
       <div className="xl:p-20 lg:p-20 md:p-10 p-5 bg-slate-200">
         {isLoading ? (
-          <Skeleton active />
+          <div>
+            <Skeleton active />
+            <p className="text-center text-xl font-bold m-4">Place wait server is starting</p>
+          </div>
         ) : (
           <div className="flex flex-col gap-10 ">
             {blogs.length > 0 ? (

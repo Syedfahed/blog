@@ -31,8 +31,8 @@ export default function Signup() {
   return (
     <div className="flex flex-col justify-center w-full items-center h-[100vh]">
       {contextHolder}
-      <img src="/images/Blog_pic.png" className="w-[300px] h-auto" alt="blog" />
-      <div className="max-w-lg w-full ">
+      <img src="/images/Blog_pic.png" className="w-[200px] h-auto" alt="blog" />
+      <div className="max-w-lg w-[80%] mx-5">
         <SignupForm onSubmit={onSubmit} isLoading={isLoading} />
       </div>
     </div>

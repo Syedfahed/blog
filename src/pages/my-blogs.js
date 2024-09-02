@@ -40,9 +40,11 @@ export default function MyBlog() {
           <Skeleton active />
         ) : (
           <div className="flex flex-col gap-10">
-            {blogs.map((blog, index) => {
+            {blogs.length>0?
+            <>{blogs.map((blog, index) => {
               return <Card key={index} blog={blog} index={index} />;
-            })}
+            })}</>:<div className="my-5 text-xl "><p>No Blogs</p> 
+            <a href="/create-blog" className="text-blue-600">Post blog</a></div>}
           </div>
         )}
       </div>
