@@ -1,6 +1,6 @@
 import React from "react";
 
-const Input = ({ name, placeholder, isError = false, type, props }) => {
+const Input = ({ name, value, placeholder, isError = false, type, props }) => {
   return (
     <input
       // ref={innerRef}
@@ -8,7 +8,8 @@ const Input = ({ name, placeholder, isError = false, type, props }) => {
       name={name}
       placeholder={placeholder}
       type={type}
-      className={`border rounded-md p-2 block w-full ${
+      value={value}
+      className={`border rounded-md p-2 block w-full focus:outline-none ${
         isError ? "border-red-600" : "border-blue-500"
       }`}
     />

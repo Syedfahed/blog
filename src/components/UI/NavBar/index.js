@@ -18,14 +18,14 @@ const NavBar = () => {
   return (
     <div className="bg-white text-black px-8 py-3 shadow-md sticky top-0 z-20">
       {contextHolder}
-      <div className=" grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 justify-between items-center gap-4">
+      <div className=" grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 grid-cols-1 justify-between items-center gap-4">
         <div className="flex justify-between items-center">
-          <span className="px-4 py-2 italic rounded-full text-xl font-normal font-mono text-blue-500">
+          <a href="/" className="px-4 py-2 italic rounded-full text-xl font-normal font-mono text-blue-500">
             BLOG-POST{" "}
             <span className="text-[12px] text-green-500 relative top-2 right-2">
               Hi {getUserData?.userName}{" "}
             </span>
-          </span>
+          </a>
           <div className=" block xl:hidden lg:hidden text-right">
             <button
               onClick={toggleMenu}
@@ -36,7 +36,7 @@ const NavBar = () => {
           </div>
         </div>
         <div
-          className={`xl:flex lg:flex md:flex  flex-row sm:flex-col justify-end ${
+          className={`xl:flex lg:flex md:flex-col  flex-row sm:flex-col justify-end ${
             isOpen ? "sm:h-[100vh] flex-col h-[100vh] ":'hidden'
           }`}
         >

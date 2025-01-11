@@ -8,6 +8,7 @@ import Blog from "./pages/blog";
 import Account from "./pages/account";
 import CreateBlog from "./pages/create-blog";
 import MyBlog from "./pages/my-blogs";
+import BlogDetail from "./pages/blog/[slug]";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -17,8 +18,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/" element={<Blog />} />
       <Route path="/account" element={<Account />} />
       <Route path="/create-blog" element={<CreateBlog />} />
-      <Route path="/create-blog/:id" element={<CreateBlog />} />
+      <Route path="/create-blog/:slug" element={<CreateBlog />} />
       <Route path="/my-blogs" element={<MyBlog />} />
+      <Route path="/blog/:slug" element={<BlogDetail />} />
+
     </Routes>
   </BrowserRouter>
 );

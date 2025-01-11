@@ -16,7 +16,7 @@ const SignupForm = ({ onSubmit, isLoading }) => {
   return (
     <form className="flex flex-col gap-3" onSubmit={handleSubmit(onSubmit)}>
       <section>
-        <label className="">Full Name</label>
+        <label className="">Name</label>
         <Input
           isError={errors.username && true}
           props={register("username")}
@@ -28,19 +28,19 @@ const SignupForm = ({ onSubmit, isLoading }) => {
           <p className="text-red-600 text-sm ">{errors.username.message}</p>
         )}
       </section>
-      <section>
+      {/* <section>
         <label className="">Mobile Number</label>
         <Input
           isError={errors.phoneNumber && true}
           props={register("phoneNumber")}
           name="phoneNumber"
-          placeholder="+91 124567890"
+          placeholder="Number"
           type="number"
         />
         {errors.phoneNumber && (
           <p className="text-red-600 text-sm ">{errors.phoneNumber.message}</p>
         )}
-      </section>
+      </section> */}
       <section>
         <label className="">Email</label>
         <Input

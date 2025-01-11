@@ -24,13 +24,16 @@ export default function Login() {
       localStorage.setItem(AUTH, data.token);
       localStorage.setItem(USER, JSON.stringify(userDecodeData));
       setLoading(false);
-      // console.log(userDecodeData);
+      console.log(data);
       success("Login success");
       navigate("/");
     } catch (err) {
       setLoading(false);
-      error('Network faild');
-      console.log(error);
+      console.log(err);
+      
+      error(err.response.data.msg);
+
+      console.log(err);
     }
   };
   return (

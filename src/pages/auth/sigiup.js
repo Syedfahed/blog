@@ -24,8 +24,7 @@ export default function Signup() {
       // console.log(data);
     } catch (err) {
       setLoading(false);
-      console.log(error);
-      error("Network faild");
+      error(err.response.data.data.message);
     }
   };
   return (
