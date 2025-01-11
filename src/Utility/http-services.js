@@ -13,7 +13,7 @@ const getHeader = (tokenType, token) => {
   }
 };
 // const baseUrl = 'http://localhost:3001/'; local
-const baseUrl='https://blog-backend-indv.onrender.com'
+const baseUrl='https://blog-backend-indv.onrender.com/'
 export const postMethod = async (request) => {
   const { endpoint, payload, tokenType } = request;
   const _headers = await getHeader(tokenType);
